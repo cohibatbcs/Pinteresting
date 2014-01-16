@@ -1,8 +1,19 @@
-$body-bg:	#DDDDDD;
-$navbar-inverse-bg:	#F58735;
-$navbar-inverse-link-color:	#3F547F;
-$brand-primary:	#F58735;
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
-$jumbotron-bg: #3F547F;
+
+$body-bg:						#DDDDDD;
+$navbar-default-bg:				#F58735;
+$navbar-default-link-color:		#3F547F;
+$brand-primary:					#F58735;
+
+$jumbotron-bg: 					#3F547F;
+
+$navbar-height:					35px;
+
+$font-family-sans-serif:		'Lobster', Helvetica, Arial, sans-serif;
 
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
