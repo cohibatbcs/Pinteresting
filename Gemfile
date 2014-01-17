@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 1.2'
 # Added while doing OneMonthRails for layout autmation
 gem "bootstrap-sass", "~> 3.0.3.0"
 
+# Manage Users
+gem 'devise', '~> 3.2.2'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
