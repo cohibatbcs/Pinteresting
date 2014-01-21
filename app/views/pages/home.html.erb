@@ -1,8 +1,8 @@
 <div class="jumbotron center">
-	<h1>T e s t   A p p</h1>
+	<h1>Test App</h1>
 	
 	<% if user_signed_in? %>
-		Something, something, logged in.
+		<%= link_to 'Something, something, pins', pins_path %>
 	<% else %>
 		<p>
 			<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
