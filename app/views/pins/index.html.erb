@@ -5,6 +5,8 @@
     <tr>
       <th>Description</th>
       <th>User</th>
+      <th>User ID</th>
+      <th>Pin ID</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,11 +18,13 @@
       <tr>
         <td><%= pin.description %></td>
         <td><%= pin.user.email if pin.user %></td>
-        <td><%= link_to 'Show', pin %></td>
+        <td><%= pin.user.id if pin.user %></td>
+        <td><%= pin.id %></td>
+        <td><%= link_to 'View', pin %></td>
         <% if pin.user == current_user %>
           <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
+          <td><%= link_to 'Delete', pin, method: :delete, data: { confirm: "Fo' real?" } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +32,6 @@
 
 <br>
 
-<%= link_to 'New Pin', new_pin_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Pin', new_pin_path %>
+<% end %>
