@@ -28,6 +28,9 @@ gem "bootstrap-sass", "~> 3.0.3.0"
 # Manage Users
 gem 'devise', '~> 3.2.2'
 
+#Image upload (& manipulation w/ ImageMagick)
+gem 'paperclip', '~> 3.0'
+
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
